@@ -20,23 +20,3 @@ m = n;
 n = remainder;
 }
 System.out.println("Greatest Common Divisor is :" + m);
-
-// Consecutive integer checking algorithm:  Works by finding the greatest common divisor of m and n as the largest integer that divides both numbers evenly.
-// Step 1 Assign the value of min{m,n} to t
-// Step 2 Divide m by t. If the remainder is 0, go to Step 3; otherwise, go to Step 4
-// Step 3 Divide n by t. If the remainder is 0, return t and stop; otherwise, go to Step 4
-// Step 4 Decrease t by 1 and go to Step 2
-
-// Middle school Procedure:
-// Step 1 Find the prime factorization of m
-// Step 2 Find the prime factorization of n
-// Step 3 Find all the common prime factors
-// Step 4 Compute the product of all the common prime factors and return it as gcd(m,n)
-
-// Sieve of Eratosthenes: 
-// Step 1: The algorithm starts by initializing a list of prime candidates with consecutive integers from 2 to n.
-// Step 2: Then, on its first iteration, the algorithm eliminates from the list all multiples of 2, i.e., 4, 6, and so on.
-// Step 3: Then it moves to the next item on the list, which is 3, and eliminates its multiples.
-// Step 4: No pass for number 4 is needed: since 4 itself and all its multiples are also multiples of 2, they were already eliminated on a previous pass.
-// Step 5: The remaining number on the list, which is used on the third pass, is 5.
-// This process should leave us with the remaining list of prime numbers needed.
