@@ -8,12 +8,12 @@
 
 // Euclid Algorithm:  Repeated application of equality until the second number becomes 0.
 // Step 1: If n = 0, return m and stop; otherwise go to Step 2
-// Step 2 Divide m by n and assign the value of the remainder to r
-// Step 3 Assign the value of n to m and the value of r to n. Go to Step 1.
+// Step 2 Divide m by n and assign the value of the remainder to remainder
+// Step 3 Assign the value of n to m and remainder to n. Go to Step 1.
 // Java Example: 
 int m = 60;
 int n = 24;
-int r;
+int remainder;
 while (n != 0) {
 remainder = m%n;
 m = n;
@@ -34,5 +34,9 @@ System.out.println("Greatest Common Divisor is :" + m);
 // Step 4 Compute the product of all the common prime factors and return it as gcd(m,n)
 
 // Sieve of Eratosthenes: 
-// Input: 
-// Psudocode:
+// Step 1: The algorithm starts by initializing a list of prime candidates with consecutive integers from 2 to n.
+// Step 2: Then, on its first iteration, the algorithm eliminates from the list all multiples of 2, i.e., 4, 6, and so on.
+// Step 3: Then it moves to the next item on the list, which is 3, and eliminates its multiples.
+// Step 4: No pass for number 4 is needed: since 4 itself and all its multiples are also multiples of 2, they were already eliminated on a previous pass.
+// Step 5: The remaining number on the list, which is used on the third pass, is 5.
+// This process should leave us with the remaining list of prime numbers needed.
