@@ -1,0 +1,38 @@
+// Basic operation - The operation contributing the most to total running time.
+// Sorting algorithms - Comparing elements (also known as keys) of a list/array being sorted and he basic operation is a key comparison.
+// Time efficientcy formula: T(n) = c(op) C(n), T(n) > running time, c(op) > execution time, C(n) > # of times a basic operation is executed, formula = input size.
+// Example problem: If the # of times a basic operations is: C(n) = (1/2)n*(n-1). What is the algorithm run time if the input is doubled? 
+// Answer: (1/2) n^2 - (1/2)n = (1/2)n^2 = C(n), C(2n) = (1/2) 2n^2, (C(2n))/C(n) = 4. There the running time will be 4 times the amount.
+
+// Problem: Find greatest common divisor of two nonnegative, non zero integers (gcd(m,n)). 
+
+// Euclid Algorithm:  Repeated application of equality until the second number becomes 0.
+// Step 1: If n = 0, return m and stop; otherwise go to Step 2
+// Step 2 Divide m by n and assign the value of the remainder to r
+// Step 3 Assign the value of n to m and the value of r to n. Go to Step 1.
+// Java Example: 
+int m = 60;
+int n = 24;
+int r;
+while (n != 0) {
+remainder = m%n;
+m = n;
+n = remainder;
+}
+System.out.println("Greatest Common Divisor is :" + m);
+
+// Consecutive integer checking algorithm:  Works by finding the greatest common divisor of m and n as the largest integer that divides both numbers evenly.
+// Step 1 Assign the value of min{m,n} to t
+// Step 2 Divide m by t. If the remainder is 0, go to Step 3; otherwise, go to Step 4
+// Step 3 Divide n by t. If the remainder is 0, return t and stop; otherwise, go to Step 4
+// Step 4 Decrease t by 1 and go to Step 2
+
+// Middle school Procedure:
+// Step 1 Find the prime factorization of m
+// Step 2 Find the prime factorization of n
+// Step 3 Find all the common prime factors
+// Step 4 Compute the product of all the common prime factors and return it as gcd(m,n)
+
+// Sieve of Eratosthenes: 
+// Input: 
+// Psudocode:
