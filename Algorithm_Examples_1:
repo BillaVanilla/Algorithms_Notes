@@ -18,4 +18,24 @@
 // Step 5: The remaining number on the list, which is used on the third pass, is 5.
 // This process should leave us with the remaining list of prime numbers needed.
 
-//Insertion sort Example:
+//Insertion sort Java Example:
+public class insertion_sort (int [] arr) {
+int key;
+int j;
+for (int i = 0; i<arr.length; i++){
+key = arr[i];
+j = i-1;
+while (j >=0 && arr[j] >key){
+arr[j+1] = arr[j];
+j -=1;
+System.out.print("array is: " + arr);
+}
+arr[j+1] = key;
+System.out.print("array is now: " + arr);
+    }
+  }
+public class void main (String [] args){
+int arr [] = {5,3,1,8,7};
+insertion_sort (arr);
+System.out.print("Output sorted array: " + arr);
+}
