@@ -39,3 +39,5 @@ int arr [] = {5,3,1,8,7};
 insertion_sort (arr);
 System.out.print("Output sorted array: " + arr);
 }
+// Best case scenario: arr = {1,3,5,7,8} because the loop only goes through once.
+// Worst case scenario: arr = {8,7,5,3,1} because the insertion sort has to loop 10 times to reorganize the array.
