@@ -1,0 +1,46 @@
+// Recursion: A technique in programming where a fuinction call itself within a subroutine.
+// If problems are solved by reducing them to smaller problems of the same form, they have a recusive nature.
+// Example: Factorial. n!= n*(n-1)*(n-2)*.....2*1. n! = n*(n-1)!
+// It is possible to solve a recursive problem with iteration (loops)
+// Python example:
+def factorial (n)
+return n*factorial(n-1)
+print(factorial(5)) 
+// Error: Stack Overflow: recursive function overflows a stack with no stop
+Fixed Python example:
+def fact(num):
+if num==1:
+return 1
+return num*fact(num-1)
+print(fact(5)) 
+// returns 120
+Iteration Pythoin Example:
+def fact(number):
+fact = 1
+
+// Recursive: calls itself until the base case is reached.
+// Iteration: The program executes a loop until condition is met.
+// Recursive tends to be more memory intensive, slower,  but more easier to read than iteration
+// Problem: Write a recursive function that takes the number (x) and an exponent and returns the results x^n.
+// x^0 = 1.
+// x^n = x*x^(n-1)
+// Python Solution:
+def power (x,n):
+if n == 0:
+return 1
+return x*power(x, n-1)
+print (power (2,3))
+// prints 8
+
+// When carelessly using recursive, it can lead to inefficient and unacceptable solutions.
+// Python Example for Finonacci sequence (Memorization Technique):
+Fib_Cache = {}
+def fib(number):
+  if number in Fib_Cache:
+    return Fib_Cache[number]
+
+  if number == 1 or number == 2:
+return 1 #Base Case
+else:
+Fib_Cache[number] = fib(number-2) + fib(number-1) #Recursive Case
+return Fib_Cache[number]
