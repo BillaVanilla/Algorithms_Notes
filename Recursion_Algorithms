@@ -33,7 +33,7 @@ print (power (2,3))
 // prints 8
 
 // When carelessly using recursive, it can lead to inefficient and unacceptable solutions.
-// Python Example for Finonacci sequence (Memorization Technique):
+// Python Example for Fibonacci sequence (Memorization Technique):
 Fib_Cache = {}
 def fib(number):
   if number in Fib_Cache:
@@ -44,3 +44,9 @@ return 1 #Base Case
 else:
 Fib_Cache[number] = fib(number-2) + fib(number-1) #Recursive Case
 return Fib_Cache[number]
+// Iteration Fibonacci sequence Pseudocode Example:
+F[0] = 0;
+F[1] = 1;
+for i = 2 to n do
+F[i] = F[i-1] + f[i-2]
+return F[n]
